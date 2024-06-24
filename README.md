@@ -1,66 +1,16 @@
-## Foundry
+Bridge messages between two smart contracts on L1 and L2
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Create a Hardhat or Foundry project which will contain two simple Smart Contracts which will send messages to each other. 
 
-Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+The sender contract will be a Solidity contract deployed on Linea Sepolia which will contain a method called 
 
-## Documentation
+greet(string messageToL)
 
-https://book.getfoundry.sh/
+which initiates the Cross-Chain call using L2MessageService smart contract on Linea L2. 
 
-## Usage
 
-### Build
+The receiving contract will be a Solidity contract deployed on Ethereum Sepolia that should persist the receiving message coming from the L2 into a variable inside the contract.
 
-```shell
-$ forge build
-```
 
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Deploy the contracts and run the functions on-chain, documenting the inner workings and end results

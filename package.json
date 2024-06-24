@@ -1,0 +1,19 @@
+{
+  "name": "bridge",
+  "version": "1.0.0",
+  "description": "Bridge messages between two smart contracts on L1 and L2",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@consensys/linea-sdk": "^0.3.0"
+  }
+}
