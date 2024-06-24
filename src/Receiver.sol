@@ -10,11 +10,13 @@ contract Receiver is MessageServiceBase {
         _init_MessageServiceBase(_messageService, _remoteSender);
     }
 
-    function onReceiveMessage(string memory messageToL) external onlyMessagingService() {
+    function onReceiveMessage(
+        string memory messageToL
+    ) external onlyMessagingService {
         messageReceived = messageToL;
     }
 
-    function claim(string memory _messageTol) external {
+    function claim(string memory _messageTol, uint256 messageNumber) external {
         messageService.claimMessage(
             remoteSender,
             address(this),
@@ -22,7 +24,7 @@ contract Receiver is MessageServiceBase {
             0,
             payable(address(0)),
             abi.encodeWithSignature("onReceiveMessage(string)", _messageTol),
-            block.prevrandao
+            messageNumber
         );
     }
 }
