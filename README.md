@@ -14,3 +14,9 @@ The receiving contract will be a Solidity contract deployed on Ethereum Sepolia 
 
 
 Deploy the contracts and run the functions on-chain, documenting the inner workings and end results
+
+**ALL DONE**
+send message tx: https://sepolia.lineascan.build/tx/0xb63b383dfc339b3a7314e0f50d5e7566989e8b9fc62ecbe430ce7be4647f0310
+claim message tx: https://sepolia.etherscan.io/tx/0x9b11b06781f66eebec343c0e0b4195d450c0f09054622d5d31a3f6902d1d29ab
+
+here we can see the state change of our receiver contract: https://sepolia.etherscan.io/tx/0x9b11b06781f66eebec343c0e0b4195d450c0f09054622d5d31a3f6902d1d29ab#statechange
